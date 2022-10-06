@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css table border</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      table,
+      td,
+      th {
+        border-style: dashed;
+        border-collapse: collapse;
+        border-width: 15px;
+      }
+
+      .orange {
+        border-color: orange;
+        color: white;
+      }
+      .white {
+        border-color: white;
+        color: white;
+        height: 200px;
+        width: 200px;
+      }
+      .green {
+        border-color: green;
+        color: white;
+      }
+      #ta {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 200px;
+      }
+      footer {
+        color: white;
+        text-align: center;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="ta">
+      <tr>
+        <th class="orange"></th>
+      </tr>
+      <tr>
+        <td class="white" id="today"></td>
+      </tr>
+      <tr>
+        <td class="green"></td>
+      </tr>
+    </table>
+    <footer>
+      @Copyright 2022 Design and Developed by Sumanta Das- All Right Reserved.
+    </footer>
+
+    <script>
+      let mydate = new Date();
+      let today = mydate.getDate();
+      let month = mydate.getMonth();
+      let year = mydate.getFullYear();
+      let todayfi = document.getElementById("today");
+      todayfi.style.fontSize = "xx-large";
+      todayfi.style.textAlign = "center";
+      todayfi.innerHTML = `${today} : ${month + 1} : ${year}`;
+    </script>
+  </body>
+</html>
